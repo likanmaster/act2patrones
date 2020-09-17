@@ -1,43 +1,42 @@
 <?php
 namespace models;
 
- class Cheque
+ class Tarjeta
  {
      public $numero;
      public $caducidad;
      public static $tipoTarjeta1 = 'Visa';
      public static $tipoTarjeta2 = 'MasterCard';
-     
-     public static function mostrarTipotarjeta()
-        {
-            echo $tipoTarjeta1;
-            echo $tipoTarjeta2;
-        }
+   
+            
 
-        Cheque::mostrarTipotarjeta();
-
-     public function __construct($nombre, $banco)
+     public function __construct($numero, $caducidad)
      {
-         $this->nombre = $nombre;
-         $this->banco = $banco;
+         $this->numero = $numero;
+         $this->caducidad = $caducidad;
+        
      }
 
-     public function getNombre()
+     public function getNumero()
      {
-         return $this->nombre;         
+         return $this->numero;         
      }
 
-     public function getBanco()
+     public function getCaducidad()
      {
-        return $this->banco;
+        return $this->caducidad;
      }
+
+   
 
 
 
      public function mostrar()
      {
-        return json_encode(array('nombre' => parent::getNombre(),
-        'banco' => parent::getBanco(), 
+        return json_encode(array(
+        'Numero' => $this->getNumero(),
+        'Caducidad' => $this->getCaducidad(), 
+       
         ), JSON_PRETTY_PRINT);
 
      }

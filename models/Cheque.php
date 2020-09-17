@@ -28,8 +28,8 @@ namespace models;
 
      public function mostrar()
      {
-        return json_encode(array('nombre' => parent::getNombre(),
-        'banco' => parent::getBanco(), 
+        return json_encode(array('nombre' => $this -> getNombre(),
+        'banco' => $this -> getBanco(), 
         ), JSON_PRETTY_PRINT);
 
      }

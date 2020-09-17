@@ -8,20 +8,22 @@ namespace models;
      
      public function __construct($tipoMoneda)
      {
-         $this->tipoMoneda = $tipoMoneda;
+        $this->tipoMoneda = $tipoMoneda;
          
      }
 
      public function getTipomoneda()
      {
-         return $this->getTipomoneda;         
+        return $this->tipoMoneda;         
      }
 
      public function mostrar()
      {
-        return json_encode(array('tipo moneda' => parent::getTipomoneda()       
+        return json_encode(array(
+            'Tipo Moneda' => $this->getTipomoneda(),       
        
-    ), JSON_PRETTY_PRINT);
+        ), JSON_PRETTY_PRINT);
 
      }
+
 }
