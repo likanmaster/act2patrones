@@ -1,10 +1,10 @@
 <?php
 namespace models;
-
+require_once 'pedidos.php';
 /**
  * Cliente
  */
-abstract class Pago
+class Pago
 {
     public $importe;
     

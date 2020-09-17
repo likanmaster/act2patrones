@@ -40,6 +40,15 @@ require_once 'pedidos.php';
      *
      * @return void
      */
-    
+    public function mostrar()
+    {
+        return json_encode(array('nombre' => parent::getNombre(),
+            'run' => parent::getRun(),
+            'email' => parent::getEmail(),
+            'edad' => parent::getEdad(),
+            'sueldoLiquido' => $this->calcularSueldoLiquido(),
+            'categoria' => $this->getCategoria(),
+        ), JSON_PRETTY_PRINT);
+    }
   
 }
