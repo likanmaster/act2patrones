@@ -41,7 +41,7 @@ echo "<br>";
 // Nuevo Efectivo
 
 // Nuevo Detalle Orden
-$nuevoDetalleorden = new DetalleOrden(4,15000,1900);
+$nuevoDetalleorden = new DetalleOrden(4,15000,1900,'visa');
 echo "Detalle Orden : <br>";
 echo $nuevoDetalleorden -> mostrar();
 echo "<br>"; 
