@@ -10,7 +10,7 @@ require_once 'pedidos.php';
     public $precio;
     public $impuesto;
     
-    
+fghfghfg    
     /**
      * __construct
      * @param  mixed $cantidad
