@@ -18,7 +18,7 @@ require_once 'pedidos.php';
      * @param  mixed $impuesto
      * @return void
      */
-    public function __construct($cantidad, $precio,$impuesto)
+    public function __construct($cantidad,$precio,$impuesto)
     {
         $this->cantidad = $cantidad;
         $this->precio = $precio;
