@@ -65,4 +65,15 @@ echo $nuevoTarjeta -> mostrar();
 echo "<br>"; 
 // Nuevo Tarjeta
 
+// Nuevo pago
+$nuevopago = new Pago(10000);
+echo "pago : <br>";
+echo $nuevopago -> getImporte();
+echo "<br>"; 
 
+// Nuevo pedido
+
+$nuevopedido = new Pedidos('12/08/2023', 1 );
+echo "Pedido : <br>";
+echo $nuevopedido -> mostrar();
+echo "<br>"; 
