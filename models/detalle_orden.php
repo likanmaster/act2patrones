@@ -9,7 +9,7 @@ require_once 'pedidos.php';
     public $cantidad;
     public $precio;
     public $impuesto;
-    
+    public $valor;
     
     /**
      * __construct
