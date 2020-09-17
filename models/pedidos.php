@@ -22,13 +22,30 @@ abstract class Pedidos
         $this->estado = $estado;
 
     }
+    public function getFecha()
+    {
+        return $this->fecha;         
+    }
+    public function getEstado()
+    {
+        return $this->estado;         
+    }
     public function CalcularTotal()
     {
         return $this->nombre;
     }
-    public function Mostrar()
+     
+    /**
+     * mostrar
+     *
+     * @return void
+     */
+    public function mostrar()
     {
-        return $this->Direccion;
+       return json_encode(array('fecha' => $this -> getFecha(),
+       'estado' => $this -> getEstado(), 
+       ), JSON_PRETTY_PRINT);
+
     }
    
    

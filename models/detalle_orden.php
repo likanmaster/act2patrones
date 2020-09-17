@@ -24,14 +24,32 @@ require_once 'pedidos.php';
         $this->precio = $precio;
         $this->impuesto = $impuesto;
     }
+
+
+
+    public function getCantidad()
+    {
+        return $this->cantidad;
+    }
+    public function getPrecio()
+    {
+        return $this->precio;
+    }
+    public function getImpuesto()
+    {
+        return $this->impuesto;
+    }
+
+
+
+
+
+
     public function CalcularSubTotal()
     {
         return $this->nombre;
     }
-    public function Mostrar()
-    {
-      
-    }
+   
    
    
     
@@ -42,13 +60,10 @@ require_once 'pedidos.php';
      */
     public function mostrar()
     {
-        return json_encode(array('nombre' => parent::getNombre(),
-            'run' => parent::getRun(),
-            'email' => parent::getEmail(),
-            'edad' => parent::getEdad(),
-            'sueldoLiquido' => $this->calcularSueldoLiquido(),
-            'categoria' => $this->getCategoria(),
-        ), JSON_PRETTY_PRINT);
+        return json_encode(array('cantidad' =>  $this->getCantidad(),
+            'precio' =>  $this->getPrecio(),
+            'impuesto' =>  $this->getImpuesto(),
+            ), JSON_PRETTY_PRINT);
     }
   
 }

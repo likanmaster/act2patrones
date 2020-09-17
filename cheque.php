@@ -33,4 +33,11 @@ namespace models;
         ), JSON_PRETTY_PRINT);
 
      }
+     public function solicitar()
+     {
+        return json_encode(array('nombre' => $this -> getNombre(),
+        'banco' => $this -> getBanco(), 
+        ), JSON_PRETTY_PRINT);
+
+     }
 }
