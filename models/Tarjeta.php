@@ -6,17 +6,15 @@ require_once 'pago.php';
  class Tarjeta extends pago
  {
      public $numero;
-     public $caducidad;
-     public static $tipoTarjeta1 = 'Visa';
-     public static $tipoTarjeta2 = 'MasterCard';
-   
-            
+     public $caducidad;       
+              
 
-     public function __construct($importe, $numero, $caducidad)
+     public function __construct($importe, $numero, $caducidad, $tipo )
      {
          parent::__construct($importe);
          $this->numero = $numero;
-         $this->caducidad = $caducidad;
+         $this->caducidad = $caducidad;   
+         $this->tipo = $tipo;       
         
      }
 
@@ -30,17 +28,14 @@ require_once 'pago.php';
         return $this->caducidad;
      }
 
-   
-
-
-
+  
      public function mostrar()
      {
         return json_encode(array(
         'Importe' => parent::getImporte(),
         'Numero' => $this->getNumero(),
         'Caducidad' => $this->getCaducidad(), 
-       
+               
         ), JSON_PRETTY_PRINT);
 
      }

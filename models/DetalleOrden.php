@@ -4,7 +4,7 @@ require_once 'pedidos.php';
 /**
  * Cliente
  */
- class Detalle_orden extends Pedidos
+ class DetalleOrden extends Pedidos
 {
     public $cantidad;
     public $precio;

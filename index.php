@@ -1,7 +1,7 @@
 <?php
 
 require_once 'models/cliente.php';
-require_once 'models/detalle_orden.php';
+require_once 'models/DetalleOrden.php';
 require_once 'models/pago.php';
 require_once 'models/pedidos.php';
 require_once 'models/Cheque.php';
@@ -10,7 +10,7 @@ require_once 'models/Producto.php';
 require_once 'models/Tarjeta.php';
 
 use models\Cliente;
-use models\Detalle_orden;
+use models\DetalleOrden;
 use models\Pago;
 use models\Pedidos;
 use models\Cheque;
@@ -40,20 +40,29 @@ echo $nuevoEfectivo -> mostrar();
 echo "<br>"; 
 // Nuevo Efectivo
 
+// Nuevo Detalle Orden
+$nuevoDetalleorden = new DetalleOrden(4,15000,1900);
+echo "Detalle Orden : <br>";
+echo $nuevoDetalleorden -> mostrar();
+echo "<br>"; 
+// Nuevo Detalle Orden
+
 
 // Nuevo Producto
 $nuevoProducto = new Producto('Salmon','1kg',20);
 echo "Producto : <br>";
 echo $nuevoProducto -> mostrar();
+echo $nuevoProducto -> FprecioCantidad();
 echo "<br>"; 
 // Tipo de Moneda
 
 
 
 // Nuevo Tarjeta
-$nuevoTarjeta = new Tarjeta(10000, 00001,'12/08/2023');
+$nuevoTarjeta = new Tarjeta(10000, 00001,'12/08/2023', 0 );
 echo "Tarjeta : <br>";
 echo $nuevoTarjeta -> mostrar();
 echo "<br>"; 
-// Tipo Tarjeta
+// Nuevo Tarjeta
+
 
