@@ -26,19 +26,19 @@ echo "<br>";
 //nuevo cliente
 
 // Nuevo Cheque
-$nuevoCheque = new Cheque('David Mendez','Banco Estado');
+$nuevoCheque = new Cheque(10000, 'David Mendez','Banco Estado');
 echo "Cheque : <br>";
 echo $nuevoCheque -> mostrar();
 echo "<br>";
 // Nuevo Cheque
 
 
-// Tipo de Moneda
-$nuevoEfectivo = new Efectivo('Peso Chileno');
+// Nuevo Efectivo
+$nuevoEfectivo = new Efectivo(10000,'Peso Chileno');
 echo "Efectivo : <br>";
 echo $nuevoEfectivo -> mostrar();
 echo "<br>"; 
-// Tipo de Moneda
+// Nuevo Efectivo
 
 
 // Nuevo Producto
@@ -51,13 +51,9 @@ echo "<br>";
 
 
 // Nuevo Tarjeta
-$nuevoTarjeta = new Tarjeta(00001,'12/08/2023');
+$nuevoTarjeta = new Tarjeta(10000, 00001,'12/08/2023');
 echo "Tarjeta : <br>";
 echo $nuevoTarjeta -> mostrar();
 echo "<br>"; 
 // Tipo Tarjeta
 
-
-//Tarjeta::mostrarTarjeta1();
-   //  $nuevoTarjeta = new Tarjeta;
-    // $nuevoTarjeta->mostrarTarjeta1(00001,'12/08/2023');

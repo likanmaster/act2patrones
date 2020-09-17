@@ -20,6 +20,11 @@ class Pago
         $this->importe = $importe;
     
     }
+
+    public function getImporte()
+    {
+        return $this->importe;
+    }
     
  
   

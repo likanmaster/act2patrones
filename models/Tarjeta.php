@@ -1,7 +1,9 @@
 <?php
 namespace models;
 
- class Tarjeta
+require_once 'pago.php';
+
+ class Tarjeta extends pago
  {
      public $numero;
      public $caducidad;
@@ -10,8 +12,9 @@ namespace models;
    
             
 
-     public function __construct($numero, $caducidad)
+     public function __construct($importe, $numero, $caducidad)
      {
+         parent::__construct($importe);
          $this->numero = $numero;
          $this->caducidad = $caducidad;
         
@@ -34,6 +37,7 @@ namespace models;
      public function mostrar()
      {
         return json_encode(array(
+        'Importe' => parent::getImporte(),
         'Numero' => $this->getNumero(),
         'Caducidad' => $this->getCaducidad(), 
        

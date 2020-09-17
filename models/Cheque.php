@@ -1,15 +1,20 @@
 <?php
 namespace models;
 
- class Cheque
+require_once 'pago.php';
+
+use models\pago;
+
+ class Cheque extends pago
  {
      public $nombre;
      public $banco;
 
 
 
-     public function __construct($nombre, $banco)
+     public function __construct($importe, $nombre, $banco)
      {
+         parent::__construct($importe);
          $this->nombre = $nombre;
          $this->banco = $banco;
      }
@@ -28,8 +33,10 @@ namespace models;
 
      public function mostrar()
      {
-        return json_encode(array('nombre' => $this -> getNombre(),
-        'banco' => $this -> getBanco(), 
+        return json_encode(array(
+        'Importe' => parent::getImporte(),
+        'Nombre' => $this -> getNombre(),
+        'Banco' => $this -> getBanco(), 
         ), JSON_PRETTY_PRINT);
 
      }
