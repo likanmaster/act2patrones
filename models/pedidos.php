@@ -4,7 +4,7 @@ namespace models;
 /**
  * Cliente
  */
-abstract class Pedidos
+class Pedidos 
 {
     public $fecha;
     public $estado;

@@ -9,6 +9,7 @@ require_once 'pedidos.php';
     public $cantidad;
     public $precio;
     public $impuesto;
+    public $subtotal;
     
    
     /**
@@ -47,7 +48,7 @@ require_once 'pedidos.php';
 
     public function CalcularSubTotal()
     {
-        return $this->nombre;
+        return $subtotal;
     }
    
    
